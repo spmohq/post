@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রিমিয়াম গাইড: কীভাবে প্রম্পট ব্যবহার করবেন</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C89B3C;
+            --bronze: #8B5E1A;
+            --ivory: #F8F4EC;
+            --cream: #FFFDF8;
+            --dark-brown: #35271A;
+            --warm-neutral: #EFEAE0;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: var(--ivory);
+            color: var(--dark-brown);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 550px;
+            padding: 25px 15px;
+        }
+
+        /* Header Style */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(145deg, var(--dark-brown), #4a3828);
+            color: var(--cream);
+            border-radius: 20px;
+            margin-bottom: 35px;
+            box-shadow: 0 10px 30px rgba(53, 39, 26, 0.2);
+            border-bottom: 4px solid var(--gold);
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            margin: 0;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            margin-top: 12px;
+            display: block;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        /* Card Style */
+        .card {
+            background: var(--cream);
+            padding: 30px;
+            border-radius: 18px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(139, 94, 26, 0.08);
+            border: 1px solid rgba(200, 155, 60, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--gold);
+        }
+
+        .step-badge {
+            background: var(--gold);
+            color: var(--dark-brown);
+            padding: 4px 18px;
+            border-radius: 50px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px rgba(200, 155, 60, 0.3);
+        }
+
+        h2 {
+            color: var(--bronze);
+            font-size: 1.4rem;
+            margin-top: 5px;
+            font-weight: 700;
+            border-bottom: 1px solid var(--warm-neutral);
+            padding-bottom: 10px;
+        }
+
+        .link-box {
+            background: var(--warm-neutral);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid var(--gold);
+            word-break: break-all;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        a {
+            color: var(--bronze);
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--gold);
+        }
+
+        ul {
+            padding-left: 5px;
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 14px;
+        }
+
+        .chat-box-demo {
+            background: var(--dark-brown);
+            padding: 20px;
+            border-radius: 12px;
+            font-style: italic;
+            color: var(--cream);
+            margin: 20px 0;
+            border-left: 4px solid var(--gold);
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .highlight {
+            color: var(--bronze);
+            background: rgba(200, 155, 60, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .success-box {
+            background: linear-gradient(to right, #fdfbf7, #f8f4ec);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--gold);
+            margin-top: 20px;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--bronze);
+            margin-top: 10px;
+            padding-bottom: 50px;
+            opacity: 0.8;
+            letter-spacing: 0.5px;
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 480px) {
+            h1 { font-size: 1.4rem; }
+            .card { padding: 20px; }
+            h2 { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>AI প্রম্পট কীভাবে ব্যবহার করবেন</h1>
+        <span class="subtitle">(এমনকি আপনি যদি আগে কখনো চ্যাটজিপিটি ব্যবহার না-ও করে থাকেন)</span>
+    </header>
+
+    <!-- Step 1 -->
+    <div class="card">
+        <div class="step-badge">প্রথম ধাপ</div>
+        <h2>চ্যাটজিপিটি (ফ্রি ভার্সন) খুলুন</h2>
+        <p>আপনার কোনো পেইড সাবস্ক্রিপশনের প্রয়োজন নেই। চ্যাটজিপিটির ফ্রি ভার্সনটিই আপনার জন্য যথেষ্ট।</p>
+        
+        <ul>
+            <li>নিচের লিঙ্কে ভিজিট করুন: 
+                <div class="link-box">
+                    <a href="https://chat.openai.com" target="_blank">chat.openai.com</a>
+                </div>
+            </li>
+            <li><strong>“Sign Up”</strong>-এ ক্লিক করুন (অথবা আগে অ্যাকাউন্ট থাকলে <strong>“Log In”</strong> করুন)।</li>
+            <li>আপনার গুগল অ্যাকাউন্ট ব্যবহার করতে পারেন—এটি দ্রুত এবং নিরাপদ।</li>
+        </ul>
+
+        <p>একবার প্রবেশ করার পর, আপনি নিচে একটি টেক্সট বক্স দেখতে পাবেন যেখানে লেখা আছে:</p>
+        <div class="chat-box-demo">
+            “Send a message…”
+        </div>
+        <p>ঠিক সেখানেই আপনাকে প্রম্পটটি পেস্ট করতে হবে।</p>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="card">
+        <div class="step-badge">দ্বিতীয় ধাপ</div>
+        <h2>প্রম্পটটি কপি ও পেস্ট করুন</h2>
+        
+        <ul>
+            <li>এই পিডিএফটি স্ক্রোল করে আপনার পছন্দের প্রম্পটটি খুঁজে বের করুন।</li>
+            <li>সম্পূর্ণ প্রম্পটটি সিলেক্ট করে কপি করুন <span class="highlight">(Ctrl+C / Copy)</span>।</li>
+            <li>চ্যাটজিপিটির সেই চ্যাট বক্সে এটি পেস্ট করুন <span class="highlight">(Ctrl+V / Paste)</span>।</li>
+            <li>কীবোর্ড থেকে <strong>Enter</strong> চাপুন অথবা সেন্ড আইকনে ক্লিক করুন।</li>
+        </ul>
+
+        <div class="success-box">
+            <p style="margin: 0;"><strong>ম্যাজিক দেখুন:</strong> চ্যাটজিপিটি মুহূর্তের মধ্যেই আপনার পরিস্থিতি এবং পছন্দের ওপর ভিত্তি করে একদম নিখুঁত একটি রেজাল্ট তৈরি করে দেবে।</p>
+        </div>
+    </div>
+
+    <div class="footer-note">
+      <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Siva Prasad Mukherjee. All Rights Reserved.</p>
+    </div>
+</div>
+
+</body>
+</html>
