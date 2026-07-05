@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Video | StudySkills</title>
+  <link rel="icon" type="image/x-icon" href="spm.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <script>
+    document.onkeydown = function(e) {
+      if (e.ctrlKey && e.keyCode === 85) {
+        return false;
+      }
+    };
+  </script>
+
+  <style>
+    .yt-embed-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .yt-embed-wrapper iframe {
+      width: 100%;
+      max-width: 900px;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 480px) {
+      .yt-embed-wrapper iframe {
+        max-width: 100%;
+      }
+    }    .footer {
+      margin-top: 80px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--card-border);
+      padding-top: 40px;
+    }
+
+  </style>
+</head>
+
+<body
+  oncontextmenu="return false"
+  onselectstart="return false"
+  ondragstart="return false"
+  class="bg-gray-50 text-gray-800 font-sans"
+>
+
+  <header class="bg-white shadow p-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h1 class="text-3xl font-bold text-blue-600">Siva's Facebook Post</h1>
+      <p class="text-lg text-gray-600">Let's support our friend's YouTube journey.</p>
+    </div>
+  </header>
+
+  <section class="text-center py-10 px-4">
+
+    <button
+      onclick="openYouTubeHandle()"
+      class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg font-semibold transition mb-10"
+    >
+      শিল্পীর চানেলটি Subscribe করুন 
+    </button>
+
+    <div class="yt-embed-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/DGdfQqP5PF4?rel=0"
+        title="YouTube Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <footer class="footer">
+      <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Siva Prasad Mukherjee. All Rights Reserved.</p>
+    </footer>
+
+  </section>
+
+  <script>
+    function openYouTubeHandle() {
+      const channelHandle = "@saregamabengali";
+      const fallbackUrl =
+        "https://www.youtube.com/" +
+        channelHandle +
+        "?sub_confirmation=1";
+
+      window.location.href = fallbackUrl;
+    }
+  </script>
+
+</body>
+</html>
